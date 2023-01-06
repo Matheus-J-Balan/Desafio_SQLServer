@@ -19,7 +19,7 @@ CREATE TABLE tipo_produto (
 CREATE TABLE inspecao (
   cd_inspecao int primary key identity(1,1),
   cd_ficha int,
-  sg_avaliacao int,
+  sg_avaliacao varchar(5),
   cd_produto int,
   hr_inspecao time,
   foreign key(cd_ficha) references
