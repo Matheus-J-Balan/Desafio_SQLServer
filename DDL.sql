@@ -53,4 +53,3 @@ CREATE TABLE producao.inspecao(
 ,	FOREIGN KEY (cd_produto, linha_produto, aa_produto) REFERENCES producao.produto(cd_produto, cd_linha_producao, aa_producao)
 ,	FOREIGN KEY (cd_avaliacao) 							REFERENCES producao.avaliacao(cd_avaliacao)
 );
-
