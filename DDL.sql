@@ -40,7 +40,7 @@ CREATE TABLE producao.produto(
 	    
 	    PRIMARY KEY(cd_produto, cd_linha_producao, aa_producao)
       
-      	FOREIGN KEY (cd_linha_producao) REFERENCES
+      	    FOREIGN KEY (cd_linha_producao) REFERENCES
                         producao.linha_producao(cd_linha_producao),
 	    FOREIGN KEY (cd_tipo_produto) REFERENCES
                         producao.tipo_produto(cd_tipo_produto),
@@ -56,7 +56,7 @@ CREATE TABLE producao.inspecao(
 	sg_avaliacao            VARCHAR(2)    NOT NULL,
 	hr_inspecao             TIME,
 	    
-      	FOREIGN KEY (cd_ficha) REFERENCES
+      	    FOREIGN KEY (cd_ficha) REFERENCES
                         producao.ficha(cd_ficha),
 	    FOREIGN KEY (cd_produto, linha_produto, aa_produto) REFERENCES
                         producao.produto(cd_produto, cd_linha_producao, aa_producao),
