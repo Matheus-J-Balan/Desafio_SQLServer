@@ -28,7 +28,7 @@ CREATE TABLE producao.ficha(
 	dt_inspecao             DATE          NOT NULL,
 	cd_matricula_inspetor   INT           NOT NULL,
 	    
-    FOREIGN KEY (cd_matricula_inspetor)   REFERENCES producao.inspetor(cd_matricula_inspetor)
+   	FOREIGN KEY (cd_matricula_inspetor)   REFERENCES producao.inspetor(cd_matricula_inspetor)
 );
 
 CREATE TABLE producao.produto(
@@ -38,7 +38,7 @@ CREATE TABLE producao.produto(
 	cd_tipo_produto         INT           NOT NULL,
 	    
 	PRIMARY KEY	(cd_produto, cd_linha_producao, aa_producao)    
-    FOREIGN KEY (cd_linha_producao) 	 REFERENCES producao.linha_producao(cd_linha_producao),
+    	FOREIGN KEY (cd_linha_producao) 	 REFERENCES producao.linha_producao(cd_linha_producao),
 	FOREIGN KEY (cd_tipo_produto) 		 REFERENCES producao.tipo_produto(cd_tipo_produto),
 );
 
@@ -53,8 +53,8 @@ CREATE TABLE producao.inspecao(
 	hr_inspecao             TIME,
 	    
 
-    FOREIGN KEY (cd_ficha) 								REFERENCES producao.ficha(cd_ficha),
+   	FOREIGN KEY (cd_ficha) 				    REFERENCES producao.ficha(cd_ficha),
 	FOREIGN KEY (cd_produto, linha_produto, aa_produto) REFERENCES producao.produto(cd_produto, cd_linha_producao, aa_producao),
-	FOREIGN KEY (cd_avaliacao) 							REFERENCES producao.avaliacao(cd_avaliacao)
+	FOREIGN KEY (cd_avaliacao) 			    REFERENCES producao.avaliacao(cd_avaliacao)
 );
 
