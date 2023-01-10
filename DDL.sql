@@ -23,7 +23,7 @@ CREATE TABLE producao.ficha(
 ,	dt_inspecao             DATE          NOT NULL
 ,	cd_matricula_inspetor   INT           NOT NULL	  
 ,	hr_inicio               TIME
-,   hr_fim                  TIME
+,       hr_fim                  TIME
 ,       FOREIGN KEY (cd_matricula_inspetor)   REFERENCES producao.inspetor(cd_matricula_inspetor)
 );
 
