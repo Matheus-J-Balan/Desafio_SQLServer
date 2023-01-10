@@ -3,11 +3,6 @@ USE desafioSQL;
 
 CREATE SCHEMA producao;
 
-
-CREATE TABLE producao.linha_producao(
-	cd_linha_producao       INT           PRIMARY KEY       IDENTITY(1,1)
-);
-
 CREATE TABLE producao.tipo_produto(
 	cd_tipo_produto         INT           PRIMARY KEY       IDENTITY(1,1)
 ,	nm_tipo_produto         VARCHAR(50)   NOT NULL
