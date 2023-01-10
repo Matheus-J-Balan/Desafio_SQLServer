@@ -27,7 +27,7 @@ CREATE TABLE producao.ficha(
 	cd_ficha                INT           PRIMARY KEY       IDENTITY(1,1)
 ,	dt_inspecao             DATE          NOT NULL
 ,	cd_matricula_inspetor   INT           NOT NULL	    
-,   FOREIGN KEY (cd_matricula_inspetor)   REFERENCES producao.inspetor(cd_matricula_inspetor)
+,       FOREIGN KEY (cd_matricula_inspetor)   REFERENCES producao.inspetor(cd_matricula_inspetor)
 );
 
 CREATE TABLE producao.produto(
