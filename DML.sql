@@ -1,7 +1,7 @@
 INSERT producao.avaliacao (sg_avaliacao, nm_avaliacao)
 			  VALUES	
 			  ('OK', 'Liberado')
-			, ('EL', 'Problema el�trico')
+			, ('EL', 'Problema elétrico')
 			, ('PT', 'Problema de pintura')
 		        , ('PE', 'Problema de estrutura')
 			, ('TR', 'Todo Rejeitado');
