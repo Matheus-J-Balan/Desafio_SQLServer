@@ -30,7 +30,7 @@ CREATE TABLE producao.produto(
 ,	cd_linha_producao       INT           NOT NULL
 ,	aa_producao             INT           NOT NULL
 ,	cd_tipo_produto         INT           NOT NULL	    
-,	PRIMARY KEY	(cd_produto, cd_linha_producao, aa_producao)    
+,	PRIMARY KEY (cd_produto, cd_linha_producao, aa_producao)    
 ,	FOREIGN KEY (cd_tipo_produto) 	      REFERENCES producao.tipo_produto(cd_tipo_produto)
 );
 
